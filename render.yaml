@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: movie-ticket-booking
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    autoDeploy: true
+    envVars:
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_APP_PASSWORD
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: TMDB_API_KEY
+        value: d4787a064f506d5c77cd7de2b0cd91eb
+      - key: FRONTEND_URL
+        value: https://movie-ticket-booking.onrender.com
+
