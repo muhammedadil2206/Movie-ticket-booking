@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeimeShow | My Account</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="account">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="HeimeShow home">
+          <span>HeimeShow</span>
+        </a>
+      </div>
+      <nav>
+        <a href="now-showing.html">Now Showing</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost" type="button" data-signout>Sign Out</button>
+        <a class="accent heimeclub-link" href="experience.html">HeimeClub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="account-hero">
+        <div class="account-intro">
+          <p class="eyebrow">HeimeClub Member</p>
+          <h1>
+            Welcome back,
+            <span data-profile-name>Guest</span>
+          </h1>
+          <p>
+            Your private lounge for premium screenings, concierge bookings, and curated invitations. Keep your contact
+            details current so our concierge team can reach you seamlessly.
+          </p>
+          <div class="account-meta">
+            <div>
+              <span>Member Since</span>
+              <strong data-profile-joined>—</strong>
+            </div>
+            <div>
+              <span>Email</span>
+              <strong data-profile-email>—</strong>
+            </div>
+            <div>
+              <span>Phone</span>
+              <strong data-profile-phone>—</strong>
+            </div>
+          </div>
+          <div class="account-actions">
+            <a class="accent" href="contact.html">Concierge Message</a>
+            <a class="ghost" href="experience.html">Explore Experiences</a>
+          </div>
+          <p class="account-status" data-account-status></p>
+        </div>
+        <div class="account-card">
+          <div class="account-card-top">
+            <span class="account-tier" data-profile-tier>HeimeClub</span>
+            <span class="account-id" data-profile-id></span>
+          </div>
+          <div class="account-card-body">
+            <h2>Preferred Guest</h2>
+            <p>Enjoy priority seating, invitation-only screenings, and bespoke hospitality moments.</p>
+          </div>
+          <div class="account-card-footer">
+            <span>Premium Status</span>
+            <span class="account-status-dot">Active</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="account-grid">
+        <article class="account-panel">
+          <h3>Upcoming Bookings</h3>
+          <p>No reservations yet. Our concierge can craft a private screening for your next occasion.</p>
+          <a class="link-arrow" href="contact.html">Plan a private event</a>
+        </article>
+        <article class="account-panel">
+          <h3>Exclusive Benefits</h3>
+          <ul>
+            <li>Complimentary welcome cocktails for you and your guests</li>
+            <li>48-hour priority access to limited-seat premieres</li>
+            <li>Preferred pricing on corporate lounge takeovers</li>
+          </ul>
+        </article>
+        <article class="account-panel">
+          <h3>Concierge Line</h3>
+          <p>
+            WhatsApp +971 52 902 1184 for immediate assistance, or email
+            <a href="mailto:concierge@heimeshow.ae">concierge@heimeshow.ae</a>.
+          </p>
+          <p class="account-note">Available daily · 09:00 – 23:00 GST</p>
+        </article>
+      </section>
+
+      <section class="account-insights">
+        <div class="insight-card">
+          <span class="insight-label">Curated Picks</span>
+          <p>We’ll tailor recommendations based on your latest private screenings.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-label">Lounge Access</span>
+          <p>Show this dashboard at check-in for priority access to the Velvet Lounge.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-label">Event Invitations</span>
+          <p>Keep notifications on to secure your seat at one-night-only immersions.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HeimeShow</h3>
+          <p>
+            Dubai's boutique cinema collective delivering curated screenings, private lounges, and unforgettable movie
+            nights.
+          </p>
+          <div class="footer-meta">
+            <span>Dubai Marina · Elevated Cinema Culture</span>
+          </div>
+        </div>
+        <div>
+          <h4>Visit Our Flagship</h4>
+          <p>
+            36 Marina View Towers<br />
+            Dubai Marina<br />
+            Dubai, UAE
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></p>
+          <p><a href="tel:+97145127843">+971 4 512 7843</a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>
+            Sun – Thu: 10:00 – 23:30<br />
+            Fri – Sat: 09:00 – 01:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-payments-inline">
+        <span>We Accept</span>
+        <div class="payment-logos">
+          <img src="assets/payments/visa.svg" alt="Visa" loading="lazy" />
+          <img src="assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
+          <img src="assets/payments/american-express.svg" alt="American Express" loading="lazy" />
+          <img src="assets/payments/apple-pay.svg" alt="Apple Pay" loading="lazy" />
+          <img src="assets/payments/tabby.svg" alt="Tabby" loading="lazy" />
+          <img src="assets/payments/tamara.svg" alt="Tamara" loading="lazy" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> HeimeShow. All rights reserved.</p>
+        <div class="footer-bottom-nav">
+          <a href="experience.html">Experiences</a>
+          <a href="now-showing.html">Showtimes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const statusEl = document.querySelector('[data-account-status]');
+        const apiBase = window.location.origin.startsWith('file') ? 'http://localhost:5000' : '';
+        const sessionManager = window.heimeshowSession;
+        const session = sessionManager?.get();
+        let token = session?.token || null;
+        let storedUser = session?.user || null;
+        const nameEl = document.querySelector('[data-profile-name]');
+        const emailEl = document.querySelector('[data-profile-email]');
+        const phoneEl = document.querySelector('[data-profile-phone]');
+        const joinedEl = document.querySelector('[data-profile-joined]');
+        const idEl = document.querySelector('[data-profile-id]');
+        const tierEl = document.querySelector('[data-profile-tier]');
+        const signoutBtn = document.querySelector('[data-signout]');
+
+        const clearSession = () => {
+          if (sessionManager) {
+            sessionManager.clear();
+          } else {
+            localStorage.removeItem('heimeshowToken');
+            localStorage.removeItem('heimeshowUser');
+          }
+        };
+
+        const redirectToAuth = () => {
+          window.location.href = 'auth.html';
+        };
+
+        const formatDate = (value) => {
+          if (!value) return '—';
+          try {
+            return new Intl.DateTimeFormat('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            }).format(new Date(value));
+          } catch (error) {
+            return value;
+          }
+        };
+
+        const populateProfile = (user) => {
+          if (!user) return;
+          nameEl.textContent = user.name || 'Member';
+          emailEl.textContent = user.email || '—';
+          phoneEl.textContent = user.phone || '—';
+          joinedEl.textContent = formatDate(user.createdAt);
+          idEl.textContent = user.id ? `ID • ${user.id.slice(-6).toUpperCase()}` : '';
+          tierEl.textContent = 'HeimeClub Elite';
+        };
+
+        if (signoutBtn) {
+          signoutBtn.addEventListener('click', () => {
+            clearSession();
+            redirectToAuth();
+          });
+        }
+
+        if (!token) {
+          clearSession();
+          redirectToAuth();
+          return;
+        }
+
+        if (storedUser) {
+          try {
+            populateProfile(storedUser);
+          } catch (error) {
+            console.warn('Failed to use cached user', error);
+          }
+        }
+
+        try {
+          const response = await fetch(`${apiBase}/api/me`, {
+            method: 'GET',
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          const result = await response.json();
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || 'Session expired.');
+          }
+          if (sessionManager && token) {
+            sessionManager.save(token, result.user);
+          } else {
+            localStorage.setItem('heimeshowUser', JSON.stringify(result.user));
+          }
+          populateProfile(result.user);
+          if (statusEl) {
+            statusEl.textContent = '';
+          }
+        } catch (error) {
+          console.error(error);
+          if (statusEl) {
+            statusEl.textContent = error.message || 'Your session has expired. Redirecting to sign in…';
+            statusEl.classList.add('error');
+          }
+          clearSession();
+          setTimeout(redirectToAuth, 2200);
+        }
+      });
+    </script>
+  </body>
+</html>

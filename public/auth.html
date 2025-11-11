@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeimeShow | Sign In</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="auth">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="HeimeShow home">
+          <span>HeimeShow</span>
+        </a>
+      </div>
+      <nav>
+        <a href="now-showing.html">Now Showing</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost sign-in-link" href="auth.html">Sign In</a>
+        <a class="accent heimeclub-link" href="experience.html">HeimeClub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-hero">
+        <div class="auth-copy">
+          <h1>Access Your HeimeShow Lounge</h1>
+          <p>
+            Manage HeimeClub perks, private bookings, and event invitations from a single premium dashboard.
+          </p>
+        </div>
+      </section>
+
+      <section class="auth-panels">
+        <div class="auth-toggle" role="tablist" aria-label="Authentication options">
+          <button class="auth-tab active" data-auth-tab="signin" role="tab" aria-selected="true">Sign In</button>
+          <button class="auth-tab" data-auth-tab="signup" role="tab" aria-selected="false">Create Account</button>
+        </div>
+
+        <div class="auth-forms">
+          <form class="auth-form active" data-auth-panel="signin" autocomplete="on" novalidate>
+            <h2>Welcome Back</h2>
+            <p class="auth-subtitle">Sign in with your HeimeClub credentials.</p>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label class="auth-password">
+              <span>Password</span>
+              <input type="password" name="password" placeholder="••••••••" required />
+              <a href="#" class="auth-inline-link">Forgot password?</a>
+            </label>
+            <button class="primary" type="submit">Sign In</button>
+            <p class="auth-alt">Need an account? <a data-auth-switch="signup" href="#">Create one</a>.</p>
+          </form>
+
+          <form
+            class="auth-form"
+            data-auth-panel="signup"
+            data-signup-endpoint="/api/signup/request"
+            data-verify-endpoint="/api/signup/verify"
+            autocomplete="on"
+            novalidate
+          >
+            <div class="auth-step" data-signup-step="details">
+              <h2>Join HeimeClub</h2>
+              <p class="auth-subtitle">Create an account to unlock concierge bookings, invitations, and rewards.</p>
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="name" placeholder="Amira Khan" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="+971 5x xxx xxxx" />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="Choose a secure password" required />
+              </label>
+              <label class="auth-checkbox">
+                <input type="checkbox" name="terms" required />
+                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+              </label>
+              <button class="primary" type="submit">Continue</button>
+              <p class="auth-alt">Already a member? <a data-auth-switch="signin" href="#">Sign in here</a>.</p>
+            </div>
+
+            <div class="auth-step hidden" data-signup-step="otp">
+              <h2>Verify Your Email</h2>
+              <p class="auth-subtitle">
+                We’ve sent a 6-digit code to <span data-signup-email></span>. Enter it below to complete your account.
+              </p>
+              <label>
+                <span>One-Time Passcode</span>
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="6"
+                  pattern="\d{6}"
+                  placeholder="123456"
+                  required
+                  data-signup-otp
+                />
+              </label>
+              <div class="auth-actions">
+                <button class="primary" type="button" data-verify-otp>Verify OTP</button>
+                <button class="ghost small" type="button" data-resend-otp>Resend Code</button>
+                <button class="ghost-link" type="button" data-edit-details>Change details</button>
+              </div>
+            </div>
+
+            <p class="form-status" data-signup-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HeimeShow</h3>
+          <p>
+            Dubai's boutique cinema collective delivering curated screenings, private lounges, and unforgettable movie nights.
+          </p>
+          <div class="footer-meta">
+            <span>Dubai Marina · Elevated Cinema Culture</span>
+          </div>
+        </div>
+        <div>
+          <h4>Visit Our Flagship</h4>
+          <p>
+            36 Marina View Towers<br />
+            Dubai Marina<br />
+            Dubai, UAE
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></p>
+          <p><a href="tel:+97145127843">+971 4 512 7843</a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>
+            Sun – Thu: 10:00 – 23:30<br />
+            Fri – Sat: 09:00 – 01:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-payments-inline">
+        <span>We Accept</span>
+        <div class="payment-logos">
+          <img src="assets/payments/visa.svg" alt="Visa" loading="lazy" />
+          <img src="assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
+          <img src="assets/payments/american-express.svg" alt="American Express" loading="lazy" />
+          <img src="assets/payments/apple-pay.svg" alt="Apple Pay" loading="lazy" />
+          <img src="assets/payments/tabby.svg" alt="Tabby" loading="lazy" />
+          <img src="assets/payments/tamara.svg" alt="Tamara" loading="lazy" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> HeimeShow. All rights reserved.</p>
+        <div class="footer-bottom-nav">
+          <a href="experience.html">Experiences</a>
+          <a href="now-showing.html">Showtimes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.auth-tab');
+        const panels = document.querySelectorAll('.auth-form');
+
+        const activate = (panelId) => {
+          tabs.forEach((tab) => {
+            const isActive = tab.dataset.authTab === panelId;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive);
+          });
+
+          panels.forEach((panel) => {
+            panel.classList.toggle('active', panel.dataset.authPanel === panelId);
+          });
+        };
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => activate(tab.dataset.authTab));
+        });
+
+        document.querySelectorAll('[data-auth-switch]').forEach((link) => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            activate(link.dataset.authSwitch);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        });
+
+        const signinForm = document.querySelector('[data-auth-panel="signin"]');
+        const sessionManager = window.heimeshowSession;
+        const apiBase = window.location.origin.startsWith('file') ? 'http://localhost:5000' : '';
+        const normalizeEndpoint = (value, fallback) => {
+          const candidate = value || fallback;
+          return /^https?:/i.test(candidate) ? candidate : `${apiBase}${candidate}`;
+        };
+        const signinEndpoint = normalizeEndpoint(signinForm?.dataset?.signinEndpoint, '/api/signin');
+        const storeSession = (token, user) => {
+          if (sessionManager && token && user) {
+            sessionManager.save(token, user);
+          } else {
+            if (token) localStorage.setItem('heimeshowToken', token);
+            if (user) localStorage.setItem('heimeshowUser', JSON.stringify(user));
+          }
+        };
+        const redirectToAccount = () => {
+          window.location.href = 'account.html';
+        };
+
+        if (signinForm) {
+          const status = document.createElement('p');
+          status.className = 'form-status';
+          signinForm.appendChild(status);
+
+          signinForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(signinForm);
+            const email = formData.get('email')?.trim();
+            const password = formData.get('password')?.trim();
+
+            if (!email || !password) {
+              status.textContent = 'Please enter your email and password.';
+              status.classList.add('error');
+              return;
+            }
+
+            status.textContent = 'Signing you in…';
+            status.classList.remove('error');
+
+            try {
+              const response = await fetch(signinEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+              });
+              const result = await response.json();
+              if (!response.ok || !result.ok) {
+                throw new Error(result.error || 'Unable to sign in.');
+              }
+              storeSession(result.token, result.user);
+              status.textContent = 'Signed in successfully. Redirecting…';
+              redirectToAccount();
+            } catch (error) {
+              console.error(error);
+              status.textContent = error.message || 'Invalid credentials. Please try again.';
+              status.classList.add('error');
+            }
+          });
+        }
+
+        const signupForm = document.querySelector('[data-auth-panel="signup"]');
+        if (!signupForm) return;
+
+        signupForm.dataset.state = signupForm.dataset.state || 'details';
+
+        const detailsStep = signupForm.querySelector('[data-signup-step="details"]');
+        const otpStep = signupForm.querySelector('[data-signup-step="otp"]');
+        const otpEmailSpan = otpStep.querySelector('[data-signup-email]');
+        const otpInput = otpStep.querySelector('[data-signup-otp]');
+        const verifyBtn = otpStep.querySelector('[data-verify-otp]');
+        const resendBtn = otpStep.querySelector('[data-resend-otp]');
+        const editBtn = otpStep.querySelector('[data-edit-details]');
+        const status = signupForm.querySelector('[data-signup-status]');
+        const requestEndpoint = normalizeEndpoint(signupForm.dataset.signupEndpoint, '/api/signup/request');
+        const verifyEndpoint = normalizeEndpoint(signupForm.dataset.verifyEndpoint, '/api/signup/verify');
+
+        let pendingEmail = '';
+        let pendingPayload = {};
+
+        const setStatus = (message, isError = false) => {
+          status.textContent = message;
+          status.classList.toggle('error', isError);
+        };
+
+        const switchToOtp = (email) => {
+          pendingEmail = email;
+          otpEmailSpan.textContent = email;
+          signupForm.dataset.state = 'otp';
+          detailsStep.classList.add('hidden');
+          otpStep.classList.remove('hidden');
+          otpInput.value = '';
+          otpInput.focus();
+        };
+
+        const switchToDetails = () => {
+          signupForm.dataset.state = 'details';
+          detailsStep.classList.remove('hidden');
+          otpStep.classList.add('hidden');
+          pendingEmail = '';
+          pendingPayload = {};
+          setStatus('');
+        };
+
+        const handleVerificationSuccess = (result) => {
+          if (result?.token && result?.user) {
+            if (sessionManager) {
+              sessionManager.save(result.token, result.user);
+            } else {
+              storeSession(result.token, result.user);
+            }
+            setStatus(result.alreadyVerified ? 'Account already verified. Redirecting…' : 'Account verified! Redirecting…');
+            redirectToAccount();
+            return;
+          }
+
+          setStatus('Account verified! You can sign in now.');
+          signupForm.reset();
+          switchToDetails();
+          activate('signin');
+        };
+
+        signupForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          if (signupForm.dataset.state === 'otp') return;
+
+          const formData = new FormData(signupForm);
+          const name = formData.get('name')?.trim();
+          const email = formData.get('email')?.trim();
+          const phone = formData.get('phone')?.trim();
+          const password = formData.get('password')?.trim();
+          const terms = formData.get('terms');
+
+          if (!name || !email || !password || !terms) {
+            setStatus('Please complete all required fields.', true);
+            return;
+          }
+
+          pendingPayload = { name, email, phone, password };
+          setStatus('Sending verification code…');
+
+          try {
+            const response = await fetch(requestEndpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(pendingPayload),
+            });
+            const result = await response.json();
+            if (!response.ok || !result.ok) {
+              throw new Error(result.error || 'Unable to send verification code.');
+            }
+            setStatus('We sent a 6-digit OTP to your email.');
+            switchToOtp(email);
+          } catch (error) {
+            console.error(error);
+            setStatus(error.message || 'Could not send verification code. Please try again.', true);
+          }
+        });
+
+        verifyBtn.addEventListener('click', async () => {
+          const otp = otpInput.value.trim();
+          if (!/^[0-9]{6}$/.test(otp)) {
+            setStatus('Please enter the 6-digit code you received.', true);
+            return;
+          }
+          setStatus('Verifying code…');
+          try {
+            const response = await fetch(verifyEndpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: pendingEmail, otp }),
+            });
+            const result = await response.json();
+            if (!response.ok || !result.ok) {
+              throw new Error(result.error || 'Unable to verify code.');
+            }
+            handleVerificationSuccess(result);
+          } catch (error) {
+            console.error(error);
+            setStatus(error.message || 'That code was invalid or expired. Please try again.', true);
+          }
+        });
+
+        resendBtn.addEventListener('click', async () => {
+          if (!pendingPayload.email) {
+            setStatus('Please enter your details first.', true);
+            return;
+          }
+          setStatus('Resending verification code…');
+          try {
+            const response = await fetch(requestEndpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(pendingPayload),
+            });
+            const result = await response.json();
+            if (!response.ok || !result.ok) {
+              throw new Error(result.error || 'Unable to resend code.');
+            }
+            setStatus('We sent another code to your email.');
+          } catch (error) {
+            console.error(error);
+            setStatus(error.message || 'Could not resend the code. Please try again later.', true);
+          }
+        });
+
+        editBtn.addEventListener('click', () => {
+          switchToDetails();
+        });
+      });
+    </script>
+  </body>
+</html>

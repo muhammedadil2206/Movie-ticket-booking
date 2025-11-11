@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeimeShow | Contact</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contact">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="HeimeShow home">
+          <span>HeimeShow</span>
+        </a>
+      </div>
+      <nav>
+        <a href="now-showing.html">Now Showing</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost sign-in-link" href="auth.html">Sign In</a>
+        <a class="accent heimeclub-link" href="experience.html">HeimeClub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <h1 class="section-title">Connect with HeimeShow</h1>
+        <p class="page-lede">
+          Our concierge team is ready to help with bookings, private events, membership perks, or special accessibility requests. Drop your details below and we will reach out with a tailored reply.
+        </p>
+        <div class="form-card">
+          <form
+            id="heimeshow-enquiry"
+            class="contact-form"
+            data-endpoint="/api/enquiry"
+            novalidate
+          >
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="enquiry-type">Enquiry Type</label>
+                <select id="enquiry-type" name="enquiryType" required>
+                  <option value="">Select an option</option>
+                  <option value="General Question">General Question</option>
+                  <option value="Private Screening">Private Screening</option>
+                  <option value="Corporate Booking">Corporate Booking</option>
+                  <option value="Membership / HeimeClub">Membership / HeimeClub</option>
+                  <option value="Accessibility Support">Accessibility Support</option>
+                  <option value="Press / Partnership">Press / Partnership</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" name="name" type="text" placeholder="Amira Khan" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="amira@example.com" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+971 5x xxx xxxx" autocomplete="tel" />
+              </div>
+              <div class="form-field">
+                <label for="preferred-date">Preferred Date</label>
+                <input id="preferred-date" name="preferredDate" type="date" />
+              </div>
+              <div class="form-field">
+                <label for="group-size">Group Size</label>
+                <input id="group-size" name="groupSize" type="number" min="1" placeholder="2" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Tell Us More</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Share key details about your enquiry and any timing preferences."
+                required
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary">Send Enquiry</button>
+              <p class="form-note">We respond within 24 hours. For urgent assistance call +971 4 512 7843.</p>
+            </div>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <h2 class="section-title">Visit Us</h2>
+          <p class="page-lede">
+            36 Marina View Towers<br />
+            Dubai Marina, Dubai, UAE
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem;">
+            <li>
+              <strong>Concierge Desk</strong>
+              <span>Daily · 09:00 – 23:30 Gulf Standard Time</span>
+            </li>
+            <li>
+              <strong>Guest Services</strong>
+              <span><a href="tel:+97145127843">+971 4 512 7843</a></span>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <span><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HeimeShow</h3>
+          <p>
+            Dubai's boutique cinema collective delivering curated screenings, private lounges, and unforgettable movie nights.
+          </p>
+          <div class="footer-meta">
+            <span>Dubai Marina • Elevated Cinema Culture</span>
+          </div>
+        </div>
+        <div>
+          <h4>Visit Our Flagship</h4>
+          <p>
+            36 Marina View Towers<br />
+            Dubai Marina<br />
+            Dubai, UAE
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></p>
+          <p><a href="tel:+97145127843">+971 4 512 7843</a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>
+            Sun – Thu: 10:00 – 23:30<br />
+            Fri – Sat: 09:00 – 01:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-payments-inline">
+        <span>We Accept</span>
+        <div class="payment-logos">
+          <img src="assets/payments/visa.svg" alt="Visa" loading="lazy" />
+          <img src="assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
+          <img src="assets/payments/american-express.svg" alt="American Express" loading="lazy" />
+          <img src="assets/payments/apple-pay.svg" alt="Apple Pay" loading="lazy" />
+          <img src="assets/payments/tabby.svg" alt="Tabby" loading="lazy" />
+          <img src="assets/payments/tamara.svg" alt="Tamara" loading="lazy" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> HeimeShow. All rights reserved.</p>
+        <div class="footer-bottom-nav">
+          <a href="experience.html">Experiences</a>
+          <a href="now-showing.html">Showtimes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const movieTitle = params.get('movie');
+        const apiBase = window.location.origin.startsWith('file') ? 'http://localhost:5000' : '';
+        if (movieTitle) {
+          const enquiryType = document.getElementById('enquiry-type');
+          if (enquiryType) enquiryType.value = 'Private Screening';
+          const message = document.getElementById('message');
+          if (message) {
+            message.value = `Interested in a private screening for "${movieTitle}". Please share available dates, lounges, and premium hospitality add-ons.`;
+          }
+        }
+        const form = document.getElementById('heimeshow-enquiry');
+        if (!form) return;
+
+        const status = form.querySelector('[data-form-status]');
+        const endpointPath = form.dataset.endpoint || '/api/enquiry';
+        const endpoint = /^https?:/i.test(endpointPath) ? endpointPath : `${apiBase}${endpointPath}`;
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          status.textContent = 'Sending your enquiry…';
+          status.classList.remove('error');
+
+          const formData = new FormData(form);
+          const payload = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+            if (!response.ok || !result.ok) {
+              throw new Error(result.error || 'Unable to send enquiry.');
+            }
+
+            status.textContent = 'Thanks! Our concierge team will respond within 24 hours.';
+            form.reset();
+          } catch (error) {
+            console.error(error);
+            status.textContent = 'We could not send your enquiry. Please try again or call us directly.';
+            status.classList.add('error');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

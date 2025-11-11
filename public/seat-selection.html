@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeimeShow | Select Seats</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="seat">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="HeimeShow home">
+          <span>HeimeShow</span>
+        </a>
+      </div>
+      <nav>
+        <a href="now-showing.html">Now Showing</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost sign-in-link" href="auth.html">Sign In</a>
+        <a class="accent heimeclub-link" href="experience.html">HeimeClub</a>
+      </div>
+    </header>
+
+    <main class="seat-main">
+      <section class="seat-hero">
+        <div class="seat-hero-details">
+          <p class="eyebrow">Select Your Seats</p>
+          <h1 data-seat-title>Loading feature…</h1>
+          <p data-seat-meta>Dubai · HeimeShow</p>
+        </div>
+        <div class="seat-hero-summary">
+          <p><span>Date</span><strong data-seat-date>—</strong></p>
+          <p><span>Theatre</span><strong data-seat-theatre>—</strong></p>
+          <p><span>Showtime</span><strong data-seat-time>—</strong></p>
+          <p><span>Format</span><strong data-seat-format>—</strong></p>
+        </div>
+      </section>
+
+      <section class="seat-layout">
+        <div class="seat-stage">
+          <div class="seat-stage-header">
+            <div class="seat-stage-info">
+              <h2>Choose Your Seats</h2>
+              <p>Premium lounges, elevated views, bespoke comfort.</p>
+            </div>
+            <div class="seat-legend">
+              <ul>
+                <li><span class="seat-icon available"></span>Available</li>
+                <li><span class="seat-icon selected"></span>Selected</li>
+                <li><span class="seat-icon premium"></span>Premium</li>
+                <li><span class="seat-icon blocked"></span>Reserved</li>
+              </ul>
+              <div class="seat-pricing">
+                <p><strong>Signature Loungers</strong><span>AED 95</span></p>
+                <p><strong>Crystal Premium Suites</strong><span>AED 145</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="seat-screen">HeimeShow Screen</div>
+          <div class="seat-grid" data-seat-grid></div>
+        </div>
+
+        <aside class="seat-summary">
+          <div class="seat-summary-card">
+            <h2>Your Selection</h2>
+            <p class="seat-summary-status" data-seat-status>Select seats to proceed.</p>
+            <p class="seat-summary-total" data-seat-total>0 seats selected · AED 0</p>
+            <button class="primary" type="button" data-seat-confirm disabled>Confirm Booking</button>
+            <p class="seat-summary-note">A concierge specialist will contact you to finalise payment and hospitality add-ons.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HeimeShow</h3>
+          <p>
+            Dubai's boutique cinema collective delivering curated screenings, private lounges, and unforgettable movie nights.
+          </p>
+          <div class="footer-meta">
+            <span>Dubai Marina · Elevated Cinema Culture</span>
+          </div>
+        </div>
+        <div>
+          <h4>Visit Our Flagship</h4>
+          <p>
+            36 Marina View Towers<br />
+            Dubai Marina<br />
+            Dubai, UAE
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></p>
+          <p><a href="tel:+97145127843">+971 4 512 7843</a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>
+            Sun – Thu: 10:00 – 23:30<br />
+            Fri – Sat: 09:00 – 01:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-payments-inline">
+        <span>We Accept</span>
+        <div class="payment-logos">
+          <img src="assets/payments/visa.svg" alt="Visa" loading="lazy" />
+          <img src="assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
+          <img src="assets/payments/american-express.svg" alt="American Express" loading="lazy" />
+          <img src="assets/payments/apple-pay.svg" alt="Apple Pay" loading="lazy" />
+          <img src="assets/payments/tabby.svg" alt="Tabby" loading="lazy" />
+          <img src="assets/payments/tamara.svg" alt="Tamara" loading="lazy" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> HeimeShow. All rights reserved.</p>
+        <div class="footer-bottom-nav">
+          <a href="experience.html">Experiences</a>
+          <a href="now-showing.html">Showtimes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

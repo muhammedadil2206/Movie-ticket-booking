@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeimeShow | Now Showing</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="now-showing">
+    <header>
+      <div class="logo">
+        <a href="index.html" aria-label="HeimeShow home">
+          <span>HeimeShow</span>
+        </a>
+      </div>
+      <nav>
+        <a href="now-showing.html">Now Showing</a>
+        <a href="coming-soon.html">Coming Soon</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost sign-in-link" href="auth.html">Sign In</a>
+        <a class="accent heimeclub-link" href="experience.html">HeimeClub</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="section-title">Now Showing in Dubai</h1>
+        <p class="page-lede">
+          Explore today's feature films, premium formats, and HeimeShow exclusives. Select a title to reserve seats instantly or view more details on TMDB.
+        </p>
+        <div class="cta" style="margin-top: 1.75rem;">
+          <a class="primary" href="coming-soon.html">See What's Next</a>
+          <a class="secondary" href="experience.html">Discover Experiences</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="movie-grid" data-now-showing>
+          <p>Loading feature films…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>HeimeShow</h3>
+          <p>
+            Dubai's boutique cinema collective delivering curated screenings, private lounges, and unforgettable movie nights.
+          </p>
+          <div class="footer-meta">
+            <span>Dubai Marina • Elevated Cinema Culture</span>
+          </div>
+        </div>
+        <div>
+          <h4>Visit Our Flagship</h4>
+          <p>
+            36 Marina View Towers<br />
+            Dubai Marina<br />
+            Dubai, UAE
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:hello@heimeshow.ae">hello@heimeshow.ae</a></p>
+          <p><a href="tel:+97145127843">+971 4 512 7843</a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>
+            Sun – Thu: 10:00 – 23:30<br />
+            Fri – Sat: 09:00 – 01:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-payments-inline">
+        <span>We Accept</span>
+        <div class="payment-logos">
+          <img src="assets/payments/visa.svg" alt="Visa" loading="lazy" />
+          <img src="assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
+          <img src="assets/payments/american-express.svg" alt="American Express" loading="lazy" />
+          <img src="assets/payments/apple-pay.svg" alt="Apple Pay" loading="lazy" />
+          <img src="assets/payments/tabby.svg" alt="Tabby" loading="lazy" />
+          <img src="assets/payments/tamara.svg" alt="Tamara" loading="lazy" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> HeimeShow. All rights reserved.</p>
+        <div class="footer-bottom-nav">
+          <a href="experience.html">Experiences</a>
+          <a href="now-showing.html">Showtimes</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
