@@ -263,6 +263,64 @@ function hydrateHero(movie, elements) {
   heroDetails.dataset.movieId = movie.id;
 }
 
+function initResponsiveHeader() {
+  const header = document.querySelector('header');
+  if (!header || header.querySelector('.nav-toggle')) return;
+  const nav = header.querySelector('nav');
+  if (!nav) return;
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'nav-toggle';
+  toggle.setAttribute('aria-label', 'Toggle navigation');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<span></span><span></span><span></span>';
+  header.insertBefore(toggle, nav);
+
+  const closeMenu = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    header.classList.remove('nav-open');
+    document.body.classList.remove('nav-open');
+  };
+
+  const openMenu = () => {
+    toggle.setAttribute('aria-expanded', 'true');
+    header.classList.add('nav-open');
+    document.body.classList.add('nav-open');
+  };
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  const closeOnEscape = (event) => {
+    if (event.key === 'Escape' && header.classList.contains('nav-open')) {
+      closeMenu();
+    }
+  };
+
+  document.addEventListener('keydown', closeOnEscape);
+
+  const interactiveSelectors = ['a', 'button'];
+  const closeTargets = [nav, header.querySelector('.header-actions')].filter(Boolean);
+  closeTargets.forEach((container) => {
+    container.querySelectorAll(interactiveSelectors.join(',')).forEach((element) => {
+      element.addEventListener('click', closeMenu);
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMenu();
+    }
+  });
+}
+
 function hydrateHeaderAuth() {
   const signInLink = document.querySelector('.sign-in-link');
   if (!signInLink) return;
@@ -1047,6 +1105,8 @@ document.addEventListener('click', (event) => {
       break;
   }
 });
+
+initResponsiveHeader();
 
 hydrateHeaderAuth();
 
