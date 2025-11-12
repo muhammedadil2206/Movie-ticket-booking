@@ -2907,4 +2907,18 @@ a.primary[aria-disabled="true"] {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
+  body[data-page="movie"] .movie-poster,
+  body[data-page="movie"] .movie-hero-content img {
+    margin: 0 auto;
+  }
+
+  body[data-page="movie"] .movie-poster {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  body[data-page="movie"] .movie-poster img {
+    width: 100%;
+  }
 }
