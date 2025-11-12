@@ -2802,3 +2802,76 @@ a.primary[aria-disabled="true"] {
     height: 30px;
   }
 }
+
+@media (max-width: 960px) {
+  body[data-page="booking"] .booking-layout {
+    gap: 1.75rem;
+  }
+
+  body[data-page="booking"] .booking-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  body[data-page="booking"] .booking-overview {
+    align-items: center;
+  }
+
+  body[data-page="booking"] .booking-dates {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+  }
+
+  body[data-page="booking"] .booking-summary {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  body[data-page="booking"] .summary-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  body[data-page="seat"] .seat-summary {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  body[data-page="seat"] .seat-summary-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  body[data-page="payment"] .payment-hero {
+    text-align: center;
+    justify-items: center;
+  }
+
+  body[data-page="payment"] .payment-hero-copy {
+    align-items: center;
+  }
+
+  body[data-page="payment"] .payment-layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  body[data-page="payment"] .payment-summary {
+    order: -1;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  body[data-page="payment"] .payment-form {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
