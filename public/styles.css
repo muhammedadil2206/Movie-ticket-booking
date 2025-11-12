@@ -2875,3 +2875,36 @@ a.primary[aria-disabled="true"] {
     margin: 0 auto;
   }
 }
+
+@media (max-width: 960px) {
+  body[data-page="movie"] .movie-hero-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.75rem;
+  }
+
+  body[data-page="movie"] .movie-hero-details {
+    align-items: center;
+  }
+
+  body[data-page="movie"] .movie-cta {
+    justify-content: center;
+  }
+
+  body[data-page="movie"] .movie-facts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body[data-page="movie"] .movie-providers,
+  body[data-page="movie"] .movie-highlights {
+    gap: 1.1rem;
+  }
+
+  body[data-page="movie"] .movie-grid,
+  body[data-page="movie"] .movie-trailers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
